@@ -29,7 +29,7 @@
 </style>
 
 <head>
-    <title>BongOS PS4 - v0.2</title>
+	<title>BongOS PS4 - v0.2</title>
 	<script>
 		function loadcomplete() {
 			document.getElementById("progress").innerHTML = sessionStorage.Queue + " Loaded Successfully !!";
@@ -44,24 +44,11 @@
 </head>
 
 <body>
-	<script>
-		window.onload = function (e) {
-			if (sessionStorage.Queue == null) {
-				sessionStorage.Queue = "";
-			} else if (sessionStorage.Queue != "") {
-				executependingqueue(sessionStorage.Queue);
-			}
-		};
-	</script>
 	<img id="bongo" src="img/bongo.gif" />
 	<h1 id="progress" class="info">BongOS PS4</h1>
-	
 	<div>
 		<script>
-			// self executing function here
 			(function () {
-				// your page initialization code here
-				// the DOM will be available here
 				goldhen();
 				return false
 			})();

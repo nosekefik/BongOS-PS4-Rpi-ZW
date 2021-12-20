@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<update_data_list>
+	<region id="uk">
+		<force_update>
+			<system level0_system_ex_version="0" level0_system_version="09.00.000" level1_system_ex_version="0" level1_system_version="09.00.000"/>
+		</force_update>
+		<system_pup ex_version="0" label="9.00" sdk_version="09.00.001" version="09.00.000">
+			<update_data update_type="full">
+				<image size="490172928"></image>
+			</update_data>
+		</system_pup>
+		<recovery_pup type="default">
+			<system_pup ex_version="0" label="9.00" sdk_version="09.00.001" version="09.00.000"/>
+			<image size="1070189568"></image>
+		</recovery_pup>
+	</region>
+</update_data_list>

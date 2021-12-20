@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteBase /
+
+RewriteRule ^document/[a-z]{2}/ps4(.*)$  index.html [L,R]
+RewriteRule ^update/ps4/list/[a-z]{2}/ps4-updatelist.xml ps4-updatelist.xml
